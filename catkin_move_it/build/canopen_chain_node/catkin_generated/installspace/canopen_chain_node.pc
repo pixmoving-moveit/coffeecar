@@ -1,0 +1,8 @@
+prefix=/home/spb/catkin_move_it/install
+
+Name: canopen_chain_node
+Description: Description of canopen_chain_node
+Version: 0.7.6
+Cflags: -I/home/spb/catkin_move_it/install/include -I/usr/include
+Libs: -L/home/spb/catkin_move_it/install/lib -lcanopen_ros_chain -l:/usr/lib/x86_64-linux-gnu/libboost_filesystem.so -l:/usr/lib/x86_64-linux-gnu/libboost_system.so
+Requires: canopen_master diagnostic_updater message_runtime pluginlib roscpp socketcan_interface std_srvs

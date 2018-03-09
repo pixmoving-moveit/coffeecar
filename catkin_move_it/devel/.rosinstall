@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/spb/catkin_move_it/devel/setup.sh

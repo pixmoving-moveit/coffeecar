@@ -1,0 +1,2 @@
+can_msgs:canopen_402:canopen_chain_node:canopen_master:moveit_can_pkg:ros_canopen:socketcan_bridge:socketcan_interface
+-DCATKIN_DEVEL_PREFIX=/home/spb/catkin_move_it/devel -DCMAKE_INSTALL_PREFIX=/home/spb/catkin_move_it/install -G Unix Makefiles

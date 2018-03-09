@@ -1,0 +1,8 @@
+prefix=/home/spb/catkin_move_it/devel
+
+Name: can_msgs
+Description: Description of can_msgs
+Version: 0.7.6
+Cflags: -I/home/spb/catkin_move_it/devel/include
+Libs: -L/home/spb/catkin_move_it/devel/lib 
+Requires: message_runtime std_msgs
