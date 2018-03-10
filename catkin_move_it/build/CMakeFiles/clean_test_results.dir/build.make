@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spb/catkin_move_it/src
+CMAKE_SOURCE_DIR = /home/ahmed/tmp/coffeecar/catkin_move_it/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spb/catkin_move_it/build
+CMAKE_BINARY_DIR = /home/ahmed/tmp/coffeecar/catkin_move_it/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/spb/catkin_move_it/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/spb/catkin_move_it/build/test_results
+	/usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/ahmed/tmp/coffeecar/catkin_move_it/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/spb/catkin_move_it/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spb/catkin_move_it/src /home/spb/catkin_move_it/src /home/spb/catkin_move_it/build /home/spb/catkin_move_it/build /home/spb/catkin_move_it/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ahmed/tmp/coffeecar/catkin_move_it/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ahmed/tmp/coffeecar/catkin_move_it/src /home/ahmed/tmp/coffeecar/catkin_move_it/src /home/ahmed/tmp/coffeecar/catkin_move_it/build /home/ahmed/tmp/coffeecar/catkin_move_it/build /home/ahmed/tmp/coffeecar/catkin_move_it/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

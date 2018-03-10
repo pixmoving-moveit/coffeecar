@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/socketcan_interface_string.dir/src/string.cpp.o"
-  "/home/spb/catkin_move_it/devel/lib/libsocketcan_interface_string.pdb"
-  "/home/spb/catkin_move_it/devel/lib/libsocketcan_interface_string.so"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/libsocketcan_interface_string.pdb"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/libsocketcan_interface_string.so"
 )
 
 # Per-language clean rules from dependency scanning.

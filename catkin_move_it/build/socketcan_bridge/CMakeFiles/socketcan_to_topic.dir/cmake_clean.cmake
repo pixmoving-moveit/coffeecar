@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/socketcan_to_topic.dir/src/socketcan_to_topic.cpp.o"
-  "/home/spb/catkin_move_it/devel/lib/libsocketcan_to_topic.pdb"
-  "/home/spb/catkin_move_it/devel/lib/libsocketcan_to_topic.so"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/libsocketcan_to_topic.pdb"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/libsocketcan_to_topic.so"
 )
 
 # Per-language clean rules from dependency scanning.

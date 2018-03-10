@@ -1,8 +1,8 @@
-prefix=/home/spb/catkin_move_it/devel
+prefix=/home/ahmed/tmp/coffeecar/catkin_move_it/devel
 
 Name: canopen_chain_node
 Description: Description of canopen_chain_node
 Version: 0.7.6
-Cflags: -I/home/spb/catkin_move_it/devel/include -I/home/spb/catkin_move_it/src/canopen_chain_node/include -I/usr/include
-Libs: -L/home/spb/catkin_move_it/devel/lib -lcanopen_ros_chain -l:/usr/lib/x86_64-linux-gnu/libboost_filesystem.so -l:/usr/lib/x86_64-linux-gnu/libboost_system.so
+Cflags: -I/home/ahmed/tmp/coffeecar/catkin_move_it/devel/include -I/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_chain_node/include -I/usr/include
+Libs: -L/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib -lcanopen_ros_chain /usr/lib/x86_64-linux-gnu/libboost_filesystem.so /usr/lib/x86_64-linux-gnu/libboost_system.so
 Requires: canopen_master diagnostic_updater message_runtime pluginlib roscpp socketcan_interface std_srvs

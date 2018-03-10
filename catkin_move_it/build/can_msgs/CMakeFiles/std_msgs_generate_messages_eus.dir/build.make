@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spb/catkin_move_it/src
+CMAKE_SOURCE_DIR = /home/ahmed/tmp/coffeecar/catkin_move_it/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spb/catkin_move_it/build
+CMAKE_BINARY_DIR = /home/ahmed/tmp/coffeecar/catkin_move_it/build
 
 # Utility rule file for std_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ can_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build: std_msgs_generate_
 .PHONY : can_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 
 can_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
-	cd /home/spb/catkin_move_it/build/can_msgs && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/ahmed/tmp/coffeecar/catkin_move_it/build/can_msgs && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : can_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 
 can_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/depend:
-	cd /home/spb/catkin_move_it/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spb/catkin_move_it/src /home/spb/catkin_move_it/src/can_msgs /home/spb/catkin_move_it/build /home/spb/catkin_move_it/build/can_msgs /home/spb/catkin_move_it/build/can_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ahmed/tmp/coffeecar/catkin_move_it/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ahmed/tmp/coffeecar/catkin_move_it/src /home/ahmed/tmp/coffeecar/catkin_move_it/src/can_msgs /home/ahmed/tmp/coffeecar/catkin_move_it/build /home/ahmed/tmp/coffeecar/catkin_move_it/build/can_msgs /home/ahmed/tmp/coffeecar/catkin_move_it/build/can_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : can_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
 

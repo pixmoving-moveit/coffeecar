@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/canopen_chain_node_generate_messages_py"
-  "/home/spb/catkin_move_it/devel/lib/python2.7/dist-packages/canopen_chain_node/srv/_GetObject.py"
-  "/home/spb/catkin_move_it/devel/lib/python2.7/dist-packages/canopen_chain_node/srv/_SetObject.py"
-  "/home/spb/catkin_move_it/devel/lib/python2.7/dist-packages/canopen_chain_node/srv/__init__.py"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/python2.7/dist-packages/canopen_chain_node/srv/_SetObject.py"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/python2.7/dist-packages/canopen_chain_node/srv/_GetObject.py"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/python2.7/dist-packages/canopen_chain_node/srv/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

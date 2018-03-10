@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/spb/catkin_move_it/src/canopen_chain_node/srv/GetObject.srv;/home/spb/catkin_move_it/src/canopen_chain_node/srv/SetObject.srv"
+services_str = "/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_chain_node/srv/GetObject.srv;/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_chain_node/srv/SetObject.srv"
 pkg_name = "canopen_chain_node"
 dependencies_str = ""
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

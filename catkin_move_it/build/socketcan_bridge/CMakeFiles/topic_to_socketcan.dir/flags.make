@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"socketcan_bridge\" -Dtopic_to_socketcan_EXPORTS
 
-CXX_INCLUDES = -I/home/spb/catkin_move_it/src/socketcan_bridge/include -I/home/spb/catkin_move_it/devel/include -I/home/spb/catkin_move_it/src/socketcan_interface/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_bridge/include -I/home/ahmed/tmp/coffeecar/catkin_move_it/devel/include -I/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/spb/catkin_move_it/src/ros_canopen
+# Install script for directory: /home/ahmed/tmp/coffeecar/catkin_move_it/src/ros_canopen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/spb/catkin_move_it/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ahmed/tmp/coffeecar/catkin_move_it/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,6 +33,6 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_canopen" TYPE FILE FILES "/home/spb/catkin_move_it/src/ros_canopen/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_canopen" TYPE FILE FILES "/home/ahmed/tmp/coffeecar/catkin_move_it/src/ros_canopen/package.xml")
 endif()
 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/canopen_ros_chain.dir/src/ros_chain.cpp.o"
-  "/home/spb/catkin_move_it/devel/lib/libcanopen_ros_chain.pdb"
-  "/home/spb/catkin_move_it/devel/lib/libcanopen_ros_chain.so"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/libcanopen_ros_chain.pdb"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/libcanopen_ros_chain.so"
 )
 
 # Per-language clean rules from dependency scanning.

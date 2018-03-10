@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/spb/catkin_move_it/src
-# Build directory: /home/spb/catkin_move_it/build
+# Source directory: /home/ahmed/tmp/coffeecar/catkin_move_it/src
+# Build directory: /home/ahmed/tmp/coffeecar/catkin_move_it/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

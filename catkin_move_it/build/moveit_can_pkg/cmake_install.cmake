@@ -1,8 +1,8 @@
-# Install script for directory: /home/spb/catkin_move_it/src/moveit_can_pkg
+# Install script for directory: /home/ahmed/tmp/coffeecar/catkin_move_it/src/moveit_can_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/spb/catkin_move_it/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ahmed/tmp/coffeecar/catkin_move_it/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,32 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/spb/catkin_move_it/build/moveit_can_pkg/catkin_generated/installspace/moveit_can_pkg.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ahmed/tmp/coffeecar/catkin_move_it/build/moveit_can_pkg/catkin_generated/installspace/moveit_can_pkg.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_can_pkg/cmake" TYPE FILE FILES
-    "/home/spb/catkin_move_it/build/moveit_can_pkg/catkin_generated/installspace/moveit_can_pkgConfig.cmake"
-    "/home/spb/catkin_move_it/build/moveit_can_pkg/catkin_generated/installspace/moveit_can_pkgConfig-version.cmake"
+    "/home/ahmed/tmp/coffeecar/catkin_move_it/build/moveit_can_pkg/catkin_generated/installspace/moveit_can_pkgConfig.cmake"
+    "/home/ahmed/tmp/coffeecar/catkin_move_it/build/moveit_can_pkg/catkin_generated/installspace/moveit_can_pkgConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_can_pkg" TYPE FILE FILES "/home/spb/catkin_move_it/src/moveit_can_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_can_pkg" TYPE FILE FILES "/home/ahmed/tmp/coffeecar/catkin_move_it/src/moveit_can_pkg/package.xml")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ahmed/tmp/coffeecar/catkin_move_it/build/moveit_can_pkg/catkin_generated/installspace/moveit_can_pkg.pc")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_can_pkg/cmake" TYPE FILE FILES
+    "/home/ahmed/tmp/coffeecar/catkin_move_it/build/moveit_can_pkg/catkin_generated/installspace/moveit_can_pkgConfig.cmake"
+    "/home/ahmed/tmp/coffeecar/catkin_move_it/build/moveit_can_pkg/catkin_generated/installspace/moveit_can_pkgConfig-version.cmake"
+    )
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_can_pkg" TYPE FILE FILES "/home/ahmed/tmp/coffeecar/catkin_move_it/src/moveit_can_pkg/package.xml")
 endif()
 

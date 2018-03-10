@@ -10,4 +10,7 @@ set(canopen_chain_node_EXEC_DEPENDS "message_runtime" "std_msgs" "canopen_master
 set(canopen_chain_node_RUN_DEPENDS "message_runtime" "std_msgs" "canopen_master" "diagnostic_updater" "pluginlib" "roslib" "roscpp" "socketcan_interface" "std_srvs")
 set(canopen_chain_node_TEST_DEPENDS )
 set(canopen_chain_node_DOC_DEPENDS )
+set(canopen_chain_node_URL_WEBSITE "http://wiki.ros.org/canopen_chain_node")
+set(canopen_chain_node_URL_BUGTRACKER "https://github.com/ros-industrial/ros_canopen/issues")
+set(canopen_chain_node_URL_REPOSITORY "https://github.com/ros-industrial/ros_canopen")
 set(canopen_chain_node_DEPRECATED "")

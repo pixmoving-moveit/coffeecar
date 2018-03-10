@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/FastDelegate.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/FastDelegate.h
 memory.h
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/asio_base.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/asio_base.h
 socketcan_interface/interface.h
 -
 socketcan_interface/dispatcher.h
@@ -24,7 +24,7 @@ boost/thread/thread.hpp
 boost/bind.hpp
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/dispatcher.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/dispatcher.h
 socketcan_interface/interface.h
 -
 list
@@ -40,7 +40,7 @@ boost/foreach.hpp
 boost/weak_ptr.hpp
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/interface.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/interface.h
 boost/array.hpp
 -
 boost/system/error_code.hpp
@@ -48,13 +48,13 @@ boost/system/error_code.hpp
 boost/shared_ptr.hpp
 -
 FastDelegate.h
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/FastDelegate.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/FastDelegate.h
 iostream
 -
 boost/thread/mutex.hpp
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/socketcan.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/socketcan.h
 socketcan_interface/asio_base.h
 -
 boost/bind.hpp
@@ -76,7 +76,7 @@ linux/can/error.h
 socketcan_interface/dispatcher.h
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/src/candump.cpp
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/src/candump.cpp
 iostream
 -
 boost/unordered_set.hpp
@@ -93,60 +93,80 @@ iostream
 -
 
 /opt/ros/kinetic/include/class_loader/class_loader.h
+boost/bind.hpp
+-
 boost/shared_ptr.hpp
 -
 boost/thread/recursive_mutex.hpp
 -
-boost/bind.hpp
+string
 -
 vector
 -
-string
--
 console_bridge/console.h
--
-class_loader/class_loader_register_macro.h
-/opt/ros/kinetic/include/class_loader/class_loader/class_loader_register_macro.h
+/opt/ros/kinetic/include/class_loader/console_bridge/console.h
 class_loader/class_loader_core.h
 /opt/ros/kinetic/include/class_loader/class_loader/class_loader_core.h
+class_loader/class_loader_register_macro.h
+/opt/ros/kinetic/include/class_loader/class_loader/class_loader_register_macro.h
+class_loader/console_bridge_compatibility.h
+/opt/ros/kinetic/include/class_loader/class_loader/console_bridge_compatibility.h
 memory
 -
 functional
 -
 
 /opt/ros/kinetic/include/class_loader/class_loader_core.h
-Poco/SharedLibrary.h
--
 boost/thread/recursive_mutex.hpp
+-
+cstdio
 -
 map
 -
-typeinfo
--
 string
 -
+typeinfo
+-
+utility
+-
+vector
+-
+Poco/SharedLibrary.h
+/opt/ros/kinetic/include/class_loader/Poco/SharedLibrary.h
 class_loader/meta_object.h
 /opt/ros/kinetic/include/class_loader/class_loader/meta_object.h
 class_loader/class_loader_exceptions.h
 /opt/ros/kinetic/include/class_loader/class_loader/class_loader_exceptions.h
-cstdio
--
 
 /opt/ros/kinetic/include/class_loader/class_loader_exceptions.h
 exception
 -
+string
+-
 
 /opt/ros/kinetic/include/class_loader/class_loader_register_macro.h
-class_loader_core.h
-/opt/ros/kinetic/include/class_loader/class_loader_core.h
+string
+-
+class_loader/class_loader_core.h
+/opt/ros/kinetic/include/class_loader/class_loader/class_loader_core.h
+class_loader/console_bridge_compatibility.h
+/opt/ros/kinetic/include/class_loader/class_loader/console_bridge_compatibility.h
+console_bridge/console.h
+/opt/ros/kinetic/include/class_loader/console_bridge/console.h
+
+/opt/ros/kinetic/include/class_loader/console_bridge_compatibility.h
 console_bridge/console.h
 -
 
 /opt/ros/kinetic/include/class_loader/meta_object.h
 console_bridge/console.h
 -
-vector
--
 typeinfo
 -
+string
+-
+vector
+-
+class_loader/console_bridge_compatibility.h
+/opt/ros/kinetic/include/class_loader/class_loader/console_bridge_compatibility.h
 

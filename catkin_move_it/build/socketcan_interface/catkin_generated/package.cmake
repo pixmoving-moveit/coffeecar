@@ -10,4 +10,7 @@ set(socketcan_interface_EXEC_DEPENDS "boost" "class_loader" "linux-kernel-header
 set(socketcan_interface_RUN_DEPENDS "boost" "class_loader" "linux-kernel-headers")
 set(socketcan_interface_TEST_DEPENDS "rosunit")
 set(socketcan_interface_DOC_DEPENDS )
+set(socketcan_interface_URL_WEBSITE "http://wiki.ros.org/socketcan_interface")
+set(socketcan_interface_URL_BUGTRACKER "https://github.com/ros-industrial/ros_canopen/issues")
+set(socketcan_interface_URL_REPOSITORY "https://github.com/ros-industrial/ros_canopen")
 set(socketcan_interface_DEPRECATED "")

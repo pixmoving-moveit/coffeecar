@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/socketcan_bcm.dir/src/canbcm.cpp.o"
-  "/home/spb/catkin_move_it/devel/lib/socketcan_interface/socketcan_bcm.pdb"
-  "/home/spb/catkin_move_it/devel/lib/socketcan_interface/socketcan_bcm"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/socketcan_interface/socketcan_bcm.pdb"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/socketcan_interface/socketcan_bcm"
 )
 
 # Per-language clean rules from dependency scanning.

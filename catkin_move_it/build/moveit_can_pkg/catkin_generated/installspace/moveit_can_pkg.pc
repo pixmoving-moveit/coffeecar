@@ -1,8 +1,8 @@
-prefix=/home/spb/catkin_move_it/install
+prefix=/home/ahmed/tmp/coffeecar/catkin_move_it/install
 
 Name: moveit_can_pkg
 Description: Description of moveit_can_pkg
 Version: 0.0.0
-Cflags: 
-Libs: -L/home/spb/catkin_move_it/install/lib 
-Requires: 
+Cflags: -I/home/ahmed/tmp/coffeecar/catkin_move_it/install/include
+Libs: -L/home/ahmed/tmp/coffeecar/catkin_move_it/install/lib 
+Requires: roscpp std_msgs

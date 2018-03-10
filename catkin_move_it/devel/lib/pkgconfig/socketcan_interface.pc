@@ -1,8 +1,8 @@
-prefix=/home/spb/catkin_move_it/devel
+prefix=/home/ahmed/tmp/coffeecar/catkin_move_it/devel
 
 Name: socketcan_interface
 Description: Description of socketcan_interface
 Version: 0.7.6
-Cflags: -I/home/spb/catkin_move_it/src/socketcan_interface/include -I/usr/include
-Libs: -L/home/spb/catkin_move_it/devel/lib -lsocketcan_interface_string -l:/usr/lib/x86_64-linux-gnu/libboost_chrono.so -l:/usr/lib/x86_64-linux-gnu/libboost_system.so -l:/usr/lib/x86_64-linux-gnu/libboost_thread.so -l:/usr/lib/x86_64-linux-gnu/libboost_date_time.so -l:/usr/lib/x86_64-linux-gnu/libboost_atomic.so -l:/usr/lib/x86_64-linux-gnu/libpthread.so
+Cflags: -I/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include -I/usr/include
+Libs: -L/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib -lsocketcan_interface_string /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_atomic.so /usr/lib/x86_64-linux-gnu/libpthread.so
 Requires: 

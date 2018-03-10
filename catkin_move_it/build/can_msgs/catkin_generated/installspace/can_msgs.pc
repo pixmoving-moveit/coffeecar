@@ -1,8 +1,8 @@
-prefix=/home/spb/catkin_move_it/install
+prefix=/home/ahmed/tmp/coffeecar/catkin_move_it/install
 
 Name: can_msgs
 Description: Description of can_msgs
 Version: 0.7.6
-Cflags: -I/home/spb/catkin_move_it/install/include
-Libs: -L/home/spb/catkin_move_it/install/lib 
+Cflags: -I/home/ahmed/tmp/coffeecar/catkin_move_it/install/include
+Libs: -L/home/ahmed/tmp/coffeecar/catkin_move_it/install/lib 
 Requires: message_runtime std_msgs

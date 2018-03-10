@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/test_conversion.dir/test/test_conversion.cpp.o"
-  "/home/spb/catkin_move_it/devel/lib/socketcan_bridge/test_conversion.pdb"
-  "/home/spb/catkin_move_it/devel/lib/socketcan_bridge/test_conversion"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/socketcan_bridge/test_conversion.pdb"
+  "/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib/socketcan_bridge/test_conversion"
 )
 
 # Per-language clean rules from dependency scanning.

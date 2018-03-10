@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/spb/catkin_move_it/devel/include/canopen_chain_node/GetObject.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/devel/include/canopen_chain_node/GetObject.h
 ros/service_traits.h
 -
 canopen_chain_node/GetObjectRequest.h
@@ -14,7 +14,7 @@ canopen_chain_node/GetObjectRequest.h
 canopen_chain_node/GetObjectResponse.h
 -
 
-/home/spb/catkin_move_it/devel/include/canopen_chain_node/GetObjectRequest.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/devel/include/canopen_chain_node/GetObjectRequest.h
 string
 -
 vector
@@ -30,7 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/spb/catkin_move_it/devel/include/canopen_chain_node/GetObjectResponse.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/devel/include/canopen_chain_node/GetObjectResponse.h
 string
 -
 vector
@@ -46,7 +46,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/spb/catkin_move_it/devel/include/canopen_chain_node/SetObject.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/devel/include/canopen_chain_node/SetObject.h
 ros/service_traits.h
 -
 canopen_chain_node/SetObjectRequest.h
@@ -54,7 +54,7 @@ canopen_chain_node/SetObjectRequest.h
 canopen_chain_node/SetObjectResponse.h
 -
 
-/home/spb/catkin_move_it/devel/include/canopen_chain_node/SetObjectRequest.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/devel/include/canopen_chain_node/SetObjectRequest.h
 string
 -
 vector
@@ -70,7 +70,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/spb/catkin_move_it/devel/include/canopen_chain_node/SetObjectResponse.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/devel/include/canopen_chain_node/SetObjectResponse.h
 string
 -
 vector
@@ -86,7 +86,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/spb/catkin_move_it/src/canopen_chain_node/include/canopen_chain_node/ros_chain.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_chain_node/include/canopen_chain_node/ros_chain.h
 canopen_master/canopen.h
 -
 canopen_master/can_layer.h
@@ -112,7 +112,7 @@ boost/scoped_ptr.hpp
 pluginlib/class_loader.h
 -
 
-/home/spb/catkin_move_it/src/canopen_chain_node/src/chain_node.cpp
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_chain_node/src/chain_node.cpp
 socketcan_interface/dispatcher.h
 -
 socketcan_interface/socketcan.h
@@ -120,13 +120,13 @@ socketcan_interface/socketcan.h
 canopen_chain_node/ros_chain.h
 -
 
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/can_layer.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/can_layer.h
 socketcan_interface/threading.h
 -
 layer.h
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/layer.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/layer.h
 
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/canopen.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/canopen.h
 socketcan_interface/interface.h
 -
 socketcan_interface/dispatcher.h
@@ -134,13 +134,13 @@ socketcan_interface/dispatcher.h
 socketcan_interface/reader.h
 -
 exceptions.h
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/exceptions.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/exceptions.h
 layer.h
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/layer.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/layer.h
 objdict.h
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/objdict.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/objdict.h
 timer.h
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/timer.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/timer.h
 stdexcept
 -
 boost/thread/condition_variable.hpp
@@ -150,7 +150,7 @@ boost/chrono/system_clocks.hpp
 boost/lexical_cast.hpp
 -
 
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/exceptions.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/exceptions.h
 exception
 -
 boost/exception/all.hpp
@@ -158,7 +158,7 @@ boost/exception/all.hpp
 boost/format.hpp
 -
 
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/layer.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/layer.h
 vector
 -
 boost/thread/shared_mutex.hpp
@@ -170,7 +170,7 @@ boost/atomic.hpp
 boost/exception/diagnostic_information.hpp
 -
 
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/objdict.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/objdict.h
 socketcan_interface/FastDelegate.h
 -
 boost/unordered_map.hpp
@@ -188,9 +188,9 @@ typeinfo
 vector
 -
 exceptions.h
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/exceptions.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/exceptions.h
 
-/home/spb/catkin_move_it/src/canopen_master/include/canopen_master/timer.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/canopen_master/include/canopen_master/timer.h
 socketcan_interface/FastDelegate.h
 -
 boost/asio.hpp
@@ -200,11 +200,11 @@ boost/thread/thread.hpp
 boost/asio/high_resolution_timer.hpp
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/FastDelegate.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/FastDelegate.h
 memory.h
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/asio_base.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/asio_base.h
 socketcan_interface/interface.h
 -
 socketcan_interface/dispatcher.h
@@ -218,7 +218,7 @@ boost/thread/thread.hpp
 boost/bind.hpp
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/dispatcher.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/dispatcher.h
 socketcan_interface/interface.h
 -
 list
@@ -234,7 +234,7 @@ boost/foreach.hpp
 boost/weak_ptr.hpp
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/interface.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/interface.h
 boost/array.hpp
 -
 boost/system/error_code.hpp
@@ -242,13 +242,13 @@ boost/system/error_code.hpp
 boost/shared_ptr.hpp
 -
 FastDelegate.h
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/FastDelegate.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/FastDelegate.h
 iostream
 -
 boost/thread/mutex.hpp
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/reader.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/reader.h
 socketcan_interface/interface.h
 -
 deque
@@ -260,7 +260,7 @@ boost/thread/condition_variable.hpp
 boost/chrono.hpp
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/socketcan.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/socketcan.h
 socketcan_interface/asio_base.h
 -
 boost/bind.hpp
@@ -282,13 +282,13 @@ linux/can/error.h
 socketcan_interface/dispatcher.h
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/string.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/string.h
 interface.h
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/interface.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/interface.h
 sstream
 -
 
-/home/spb/catkin_move_it/src/socketcan_interface/include/socketcan_interface/threading.h
+/home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_interface/include/socketcan_interface/threading.h
 socketcan_interface/interface.h
 -
 boost/thread/thread.hpp
@@ -297,68 +297,94 @@ boost/bind.hpp
 -
 
 /opt/ros/kinetic/include/class_loader/class_loader.h
+boost/bind.hpp
+-
 boost/shared_ptr.hpp
 -
 boost/thread/recursive_mutex.hpp
 -
-boost/bind.hpp
+string
 -
 vector
 -
-string
--
 console_bridge/console.h
--
-class_loader/class_loader_register_macro.h
-/opt/ros/kinetic/include/class_loader/class_loader/class_loader_register_macro.h
+/opt/ros/kinetic/include/class_loader/console_bridge/console.h
 class_loader/class_loader_core.h
 /opt/ros/kinetic/include/class_loader/class_loader/class_loader_core.h
+class_loader/class_loader_register_macro.h
+/opt/ros/kinetic/include/class_loader/class_loader/class_loader_register_macro.h
+class_loader/console_bridge_compatibility.h
+/opt/ros/kinetic/include/class_loader/class_loader/console_bridge_compatibility.h
 memory
 -
 functional
 -
 
 /opt/ros/kinetic/include/class_loader/class_loader_core.h
-Poco/SharedLibrary.h
--
 boost/thread/recursive_mutex.hpp
+-
+cstdio
 -
 map
 -
-typeinfo
--
 string
 -
+typeinfo
+-
+utility
+-
+vector
+-
+Poco/SharedLibrary.h
+/opt/ros/kinetic/include/class_loader/Poco/SharedLibrary.h
 class_loader/meta_object.h
 /opt/ros/kinetic/include/class_loader/class_loader/meta_object.h
 class_loader/class_loader_exceptions.h
 /opt/ros/kinetic/include/class_loader/class_loader/class_loader_exceptions.h
-cstdio
--
 
 /opt/ros/kinetic/include/class_loader/class_loader_exceptions.h
 exception
 -
+string
+-
 
 /opt/ros/kinetic/include/class_loader/class_loader_register_macro.h
-class_loader_core.h
-/opt/ros/kinetic/include/class_loader/class_loader_core.h
+string
+-
+class_loader/class_loader_core.h
+/opt/ros/kinetic/include/class_loader/class_loader/class_loader_core.h
+class_loader/console_bridge_compatibility.h
+/opt/ros/kinetic/include/class_loader/class_loader/console_bridge_compatibility.h
+console_bridge/console.h
+/opt/ros/kinetic/include/class_loader/console_bridge/console.h
+
+/opt/ros/kinetic/include/class_loader/console_bridge_compatibility.h
 console_bridge/console.h
 -
 
 /opt/ros/kinetic/include/class_loader/meta_object.h
 console_bridge/console.h
 -
-vector
--
 typeinfo
 -
+string
+-
+vector
+-
+class_loader/console_bridge_compatibility.h
+/opt/ros/kinetic/include/class_loader/class_loader/console_bridge_compatibility.h
 
 /opt/ros/kinetic/include/class_loader/multi_library_class_loader.h
-class_loader.h
-/opt/ros/kinetic/include/class_loader/class_loader.h
 boost/thread.hpp
 -
+map
+-
+string
+-
+vector
+-
+class_loader/class_loader.h
+/opt/ros/kinetic/include/class_loader/class_loader/class_loader.h
 
 /opt/ros/kinetic/include/diagnostic_msgs/DiagnosticArray.h
 string
@@ -448,54 +474,84 @@ diagnostic_updater/DiagnosticStatusWrapper.h
 boost/thread.hpp
 -
 
-/opt/ros/kinetic/include/pluginlib/class_desc.h
-
-/opt/ros/kinetic/include/pluginlib/class_loader.h
-boost/algorithm/string.hpp
-/opt/ros/kinetic/include/pluginlib/boost/algorithm/string.hpp
-class_loader/multi_library_class_loader.h
-/opt/ros/kinetic/include/pluginlib/class_loader/multi_library_class_loader.h
-map
--
-pluginlib/class_desc.h
-/opt/ros/kinetic/include/pluginlib/pluginlib/class_desc.h
-pluginlib/class_loader_base.h
-/opt/ros/kinetic/include/pluginlib/pluginlib/class_loader_base.h
-pluginlib/pluginlib_exceptions.h
-/opt/ros/kinetic/include/pluginlib/pluginlib/pluginlib_exceptions.h
-ros/console.h
-/opt/ros/kinetic/include/pluginlib/ros/console.h
-ros/package.h
-/opt/ros/kinetic/include/pluginlib/ros/package.h
-tinyxml.h
-/opt/ros/kinetic/include/pluginlib/tinyxml.h
-class_loader_imp.h
-/opt/ros/kinetic/include/pluginlib/class_loader_imp.h
-
-/opt/ros/kinetic/include/pluginlib/class_loader_base.h
-vector
--
-string
--
-
-/opt/ros/kinetic/include/pluginlib/class_loader_imp.h
-boost/bind.hpp
-/opt/ros/kinetic/include/pluginlib/boost/bind.hpp
-boost/filesystem.hpp
-/opt/ros/kinetic/include/pluginlib/boost/filesystem.hpp
-class_loader/class_loader.h
+/opt/ros/kinetic/include/pluginlib/././class_loader_imp.hpp
+cstdlib
 -
 list
 -
-ros/package.h
-/opt/ros/kinetic/include/pluginlib/ros/package.h
+map
+-
+memory
+-
 sstream
 -
 stdexcept
 -
+string
+-
+utility
+-
+vector
+-
+boost/algorithm/string.hpp
+/opt/ros/kinetic/include/pluginlib/././boost/algorithm/string.hpp
+boost/bind.hpp
+/opt/ros/kinetic/include/pluginlib/././boost/bind.hpp
+boost/filesystem.hpp
+/opt/ros/kinetic/include/pluginlib/././boost/filesystem.hpp
+boost/foreach.hpp
+/opt/ros/kinetic/include/pluginlib/././boost/foreach.hpp
+class_loader/class_loader.h
+/opt/ros/kinetic/include/pluginlib/././class_loader/class_loader.h
+ros/package.h
+/opt/ros/kinetic/include/pluginlib/././ros/package.h
+./class_loader.hpp
+/opt/ros/kinetic/include/pluginlib/./././class_loader.hpp
 
-/opt/ros/kinetic/include/pluginlib/pluginlib_exceptions.h
+/opt/ros/kinetic/include/pluginlib/./class_loader.hpp
+map
+-
+string
+-
+vector
+-
+boost/algorithm/string.hpp
+/opt/ros/kinetic/include/pluginlib/./boost/algorithm/string.hpp
+class_loader/multi_library_class_loader.h
+/opt/ros/kinetic/include/pluginlib/./class_loader/multi_library_class_loader.h
+pluginlib/class_desc.hpp
+/opt/ros/kinetic/include/pluginlib/./pluginlib/class_desc.hpp
+pluginlib/class_loader_base.hpp
+/opt/ros/kinetic/include/pluginlib/./pluginlib/class_loader_base.hpp
+pluginlib/exceptions.hpp
+/opt/ros/kinetic/include/pluginlib/./pluginlib/exceptions.hpp
+ros/console.h
+/opt/ros/kinetic/include/pluginlib/./ros/console.h
+ros/package.h
+/opt/ros/kinetic/include/pluginlib/./ros/package.h
+tinyxml2.h
+/opt/ros/kinetic/include/pluginlib/./tinyxml2.h
+./class_loader_imp.hpp
+/opt/ros/kinetic/include/pluginlib/././class_loader_imp.hpp
+
+/opt/ros/kinetic/include/pluginlib/class_desc.hpp
+string
+-
+
+/opt/ros/kinetic/include/pluginlib/class_loader.h
+./class_loader.hpp
+/opt/ros/kinetic/include/pluginlib/./class_loader.hpp
+
+/opt/ros/kinetic/include/pluginlib/class_loader_base.hpp
+string
+-
+vector
+-
+
+/opt/ros/kinetic/include/pluginlib/exceptions.hpp
 stdexcept
+-
+string
 -
 
 /opt/ros/kinetic/include/ros/advertise_options.h
@@ -743,6 +799,8 @@ ros/rate.h
 /opt/ros/kinetic/include/ros/ros/rate.h
 ros/wall_timer.h
 /opt/ros/kinetic/include/ros/ros/wall_timer.h
+ros/steady_timer.h
+/opt/ros/kinetic/include/ros/ros/steady_timer.h
 ros/advertise_options.h
 /opt/ros/kinetic/include/ros/ros/advertise_options.h
 ros/advertise_service_options.h
@@ -1005,6 +1063,20 @@ boost/shared_ptr.hpp
 /opt/ros/kinetic/include/ros/static_assert.h
 boost/static_assert.hpp
 -
+
+/opt/ros/kinetic/include/ros/steady_timer.h
+common.h
+/opt/ros/kinetic/include/ros/common.h
+forwards.h
+/opt/ros/kinetic/include/ros/forwards.h
+steady_timer_options.h
+/opt/ros/kinetic/include/ros/steady_timer_options.h
+
+/opt/ros/kinetic/include/ros/steady_timer_options.h
+common.h
+/opt/ros/kinetic/include/ros/common.h
+ros/forwards.h
+/opt/ros/kinetic/include/ros/ros/forwards.h
 
 /opt/ros/kinetic/include/ros/subscribe_options.h
 ros/forwards.h

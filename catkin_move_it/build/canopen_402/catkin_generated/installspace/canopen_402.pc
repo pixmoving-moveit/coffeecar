@@ -1,8 +1,8 @@
-prefix=/home/spb/catkin_move_it/install
+prefix=/home/ahmed/tmp/coffeecar/catkin_move_it/install
 
 Name: canopen_402
 Description: Description of canopen_402
 Version: 0.7.6
-Cflags: -I/home/spb/catkin_move_it/install/include -I/usr/include
-Libs: -L/home/spb/catkin_move_it/install/lib -lcanopen_402
+Cflags: -I/home/ahmed/tmp/coffeecar/catkin_move_it/install/include -I/usr/include
+Libs: -L/home/ahmed/tmp/coffeecar/catkin_move_it/install/lib -lcanopen_402
 Requires: canopen_master

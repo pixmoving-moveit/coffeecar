@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spb/catkin_move_it/src
+CMAKE_SOURCE_DIR = /home/ahmed/tmp/coffeecar/catkin_move_it/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spb/catkin_move_it/build
+CMAKE_BINARY_DIR = /home/ahmed/tmp/coffeecar/catkin_move_it/build
 
 # Utility rule file for _run_tests_socketcan_bridge_rostest.
 
@@ -63,10 +63,10 @@ socketcan_bridge/CMakeFiles/_run_tests_socketcan_bridge_rostest.dir/build: _run_
 .PHONY : socketcan_bridge/CMakeFiles/_run_tests_socketcan_bridge_rostest.dir/build
 
 socketcan_bridge/CMakeFiles/_run_tests_socketcan_bridge_rostest.dir/clean:
-	cd /home/spb/catkin_move_it/build/socketcan_bridge && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_socketcan_bridge_rostest.dir/cmake_clean.cmake
+	cd /home/ahmed/tmp/coffeecar/catkin_move_it/build/socketcan_bridge && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_socketcan_bridge_rostest.dir/cmake_clean.cmake
 .PHONY : socketcan_bridge/CMakeFiles/_run_tests_socketcan_bridge_rostest.dir/clean
 
 socketcan_bridge/CMakeFiles/_run_tests_socketcan_bridge_rostest.dir/depend:
-	cd /home/spb/catkin_move_it/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spb/catkin_move_it/src /home/spb/catkin_move_it/src/socketcan_bridge /home/spb/catkin_move_it/build /home/spb/catkin_move_it/build/socketcan_bridge /home/spb/catkin_move_it/build/socketcan_bridge/CMakeFiles/_run_tests_socketcan_bridge_rostest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ahmed/tmp/coffeecar/catkin_move_it/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ahmed/tmp/coffeecar/catkin_move_it/src /home/ahmed/tmp/coffeecar/catkin_move_it/src/socketcan_bridge /home/ahmed/tmp/coffeecar/catkin_move_it/build /home/ahmed/tmp/coffeecar/catkin_move_it/build/socketcan_bridge /home/ahmed/tmp/coffeecar/catkin_move_it/build/socketcan_bridge/CMakeFiles/_run_tests_socketcan_bridge_rostest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : socketcan_bridge/CMakeFiles/_run_tests_socketcan_bridge_rostest.dir/depend
 
