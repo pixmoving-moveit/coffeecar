@@ -1,8 +1,0 @@
-prefix=/home/ahmed/tmp/coffeecar/catkin_move_it/devel
-
-Name: moveit_can_pkg
-Description: Description of moveit_can_pkg
-Version: 0.0.0
-Cflags: -I/home/ahmed/tmp/coffeecar/catkin_move_it/src/moveit_can_pkg/include
-Libs: -L/home/ahmed/tmp/coffeecar/catkin_move_it/devel/lib 
-Requires: roscpp std_msgs

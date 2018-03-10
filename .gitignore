@@ -1,2 +1,9 @@
 build
 devel
+devel_isolated
+el
+el_isolated
+.vscode
+.ycm_extra_conf.py
+launch.json
+tasks.json

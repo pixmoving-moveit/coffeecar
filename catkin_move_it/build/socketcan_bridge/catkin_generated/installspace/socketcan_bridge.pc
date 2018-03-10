@@ -1,8 +1,0 @@
-prefix=/home/ahmed/tmp/coffeecar/catkin_move_it/install
-
-Name: socketcan_bridge
-Description: Description of socketcan_bridge
-Version: 0.7.6
-Cflags: -I/home/ahmed/tmp/coffeecar/catkin_move_it/install/include
-Libs: -L/home/ahmed/tmp/coffeecar/catkin_move_it/install/lib -lsocketcan_to_topic -ltopic_to_socketcan
-Requires: can_msgs roscpp socketcan_interface
