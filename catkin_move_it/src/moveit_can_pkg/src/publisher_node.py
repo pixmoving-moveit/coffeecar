@@ -12,10 +12,10 @@ def talker():
     while not rospy.is_shutdown():
 
         msg = Frame()
-        data_list = [speed_cmd, 255, 255, 2, 1, 1, 1]
+        data_list = [1, 255, 255, 1, 1, 1, 1]
         checksum = np.uint8(sum(data_list))
         print(checksum)
-        data_list.append((checksum))
+        data_list.append((3))
 
         msg.id = 0x0183
         msg.dlc = 8

@@ -112,7 +112,7 @@ catkin_package(
 ## Build ##
 ###########
 catkin_package(
-   INCLUDE_DIRS include
+   INCLUDE_DIRS
 #  LIBRARIES catbot_control
    CATKIN_DEPENDS roscpp std_msgs 
 #  DEPENDS system_lib
