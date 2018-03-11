@@ -3,6 +3,7 @@ devel
 devel_isolated
 el
 el_isolated
+.idea
 .vscode
 .ycm_extra_conf.py
 launch.json
