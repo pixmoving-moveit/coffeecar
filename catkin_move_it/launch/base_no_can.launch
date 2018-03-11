@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <!--DBW Node -->
+    <include file="$(find twist_controller)/launch/dbw.launch"/>
+
+    <!--CAN Listeners and Publishers -->
+    <include file="$(find moveit_can_pkg)/launch/can_pub_sub.launch"/>
+
+    <!--Teleop Node -->
+    <include file="$(find teleop_joy)/launch/teleop_joy.launch"/>
+
+</launch>
