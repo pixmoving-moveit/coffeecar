@@ -19,14 +19,15 @@ class DBWNode(object):
         rospy.init_node('dbw_node')
 
         # Parameters
-        self.sample_time = rospy.get_param('~sample_time', 0.02)        # in s
-        min_speed = rospy.get_param('~min_speed', 0.1)                  # in m/s
-        max_speed = rospy.get_param('~max_speed', 0.1)                  # in m/s        
-        wheel_base = rospy.get_param('~wheel_base', 2.1)                # in m
-        max_lat_accel = rospy.get_param('~max_lat_accel', 3.)           # in m/s^2
-        accel_limit = rospy.get_param('~accel_limit', 1.)               # in m/s^2
-        decel_limit = rospy.get_param('~decel_limit', -5)               # in m/s^2
-        max_steer_angle = rospy.get_param('~max_steer_angle', 0.44)     # in rad
+        self.sample_time = rospy.get_param('~sample_time', 0.02)           # in s
+        min_speed = rospy.get_param('~min_speed', 0.1)                     # in m/s
+        max_speed = rospy.get_param('~max_speed', 0.1)                     # in m/s
+        wheel_base = rospy.get_param('~wheel_base', 2.1)                   # in m
+        max_lat_accel = rospy.get_param('~max_lat_accel', 3.)              # in m/s^2
+        accel_limit = rospy.get_param('~accel_limit', 1.)                  # in m/s^2
+        decel_limit = rospy.get_param('~decel_limit', -5)                  # in m/s^2
+        self.max_steer_angle = rospy.get_param('~max_steer_angle', 0.44)   # in rad
+        self.direct_steering = rospy.get_param('~direct_steering', False)  # bool
 
         # Create `TwistController` object
         kwargs = {
@@ -37,7 +38,7 @@ class DBWNode(object):
                   'max_lat_accel'     : max_lat_accel,
                   'accel_limit'       : accel_limit,
                   'decel_limit'       : decel_limit,
-                  'max_steer_angle'   : max_steer_angle,
+                  'max_steer_angle'   : self.max_steer_angle,
         }
         self.controller = Controller(**kwargs)
 
@@ -54,7 +55,7 @@ class DBWNode(object):
         self.angular_velocity = None
         self.dbw_enabled = False
 
-        rospy.Subscriber('/vehicle/current_twist', TwistStamped, self.current_velocity_cb)
+        rospy.Subscriber('/actual_twist', TwistStamped, self.current_velocity_cb)
         rospy.Subscriber('/twist_cmd', TwistStamped, self.twist_cmd_cb)
         rospy.Subscriber('/vehicle/dbw_enabled', Bool, self.dbw_enabled_cb)
 
@@ -64,16 +65,19 @@ class DBWNode(object):
         rate = rospy.Rate(1/self.sample_time) # 50Hz
         while not rospy.is_shutdown():
             kwargs = {
-                'linear_velocity_cmd'  : self.linear_velocity_cmd,
-                'angular_velocity_cmd' : self.angular_velocity_cmd,
-                'linear_velocity'      : self.linear_velocity,
-                'angular_velocity'     : self.angular_velocity,
-                'dbw_enabled'          : self.dbw_enabled
+                      'linear_velocity_cmd'  : self.linear_velocity_cmd,
+                      'angular_velocity_cmd' : self.angular_velocity_cmd,
+                      'linear_velocity'      : self.linear_velocity,
+                      'angular_velocity'     : self.angular_velocity,
+                      'dbw_enabled'          : self.dbw_enabled
             }
-            speed, steer = self.controller.control(**kwargs)
+            speed_cmd, steer_cmd = self.controller.control(**kwargs)
 
-            if (self.current_velocity is not None) and (self.twist_cmd is not None) and (self.dbw_enabled is True):
-                self.publish(speed, steer)
+            if self.direct_steering is True and self.angular_velocity_cmd is not None :
+                steer_cmd = self.angular_velocity_cmd/0.44 * self.max_steer_angle #TODO remove the hardcoded value (see line 26 teleop_joy.cpp)
+
+            if (self.current_velocity is not None and self.twist_cmd is not None and self.dbw_enabled is not None):
+                self.publish(speed_cmd, steer_cmd)
 
             rate.sleep()
 

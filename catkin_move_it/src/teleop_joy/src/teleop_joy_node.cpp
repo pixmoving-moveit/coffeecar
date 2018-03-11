@@ -1,6 +1,7 @@
 #include <ros/ros.h>
 #include <geometry_msgs/TwistStamped.h>
 #include <sensor_msgs/Joy.h>
+#include <ros/console.h>
 
 class TeleopCoffeeRobot
 {
@@ -21,7 +22,9 @@ private:
 
 TeleopCoffeeRobot::TeleopCoffeeRobot():
   linear_(1),
-  angular_(2)
+  angular_(3),
+  a_scale_(0.44),  // TODO: use a parameter instead
+  l_scale_(2.7)    // TODO: use a parameter instead
 {
   nh_.param("axis_linear", linear_, linear_);
   nh_.param("axis_angular", angular_, angular_);
@@ -30,7 +33,6 @@ TeleopCoffeeRobot::TeleopCoffeeRobot():
 
   vel_pub_ = nh_.advertise<geometry_msgs::TwistStamped>("/twist_cmd", 1);
   joy_sub_ = nh_.subscribe<sensor_msgs::Joy>("joy", 10, &TeleopCoffeeRobot::joyCallback, this);
-
 }
 
 void TeleopCoffeeRobot::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
@@ -38,6 +40,9 @@ void TeleopCoffeeRobot::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
   geometry_msgs::TwistStamped twist;
   twist.twist.angular.z = a_scale_*joy->axes[angular_];
   twist.twist.linear.x = l_scale_*joy->axes[linear_];
+  // ROS_INFO_STREAM("Angular " << joy->axes[angular_]);
+  // ROS_INFO_STREAM("Linear " << joy->axes[linear_]);
+
   vel_pub_.publish(twist);
 }
 

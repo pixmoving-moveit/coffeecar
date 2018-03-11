@@ -1,6 +1,6 @@
 <launch>
 
-  <node pkg="moveit_can_pkg" type="can_listener_node_moveit.py" name="receive_can" />
-  <node pkg="moveit_can_pkg" type="can_publisher_node_moveit.py" name="send_can" />
+  <node pkg="moveit_can_pkg" type="can_listener_node_moveit.py" name="receive_can" output="screen"/>
+  <node pkg="moveit_can_pkg" type="can_publisher_node_moveit.py" name="send_can" output="screen"/>
  
 </launch>

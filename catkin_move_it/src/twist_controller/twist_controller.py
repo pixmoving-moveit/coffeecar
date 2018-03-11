@@ -31,7 +31,7 @@ class Controller(object):
         self.dbw_enabled = kwargs['dbw_enabled']
 
         if (self.dbw_enabled is True) and (self.linear_velocity_cmd is not None) and (self.linear_velocity is not None):
-            speed_cmd = self.linear_velocity_cmd * 0.277778
+            speed_cmd = self.linear_velocity_cmd/0.277778
             steer_cmd = self.yaw_controller.get_steering(self.linear_velocity_cmd, self.angular_velocity_cmd, self.linear_velocity)
         else:
             speed_cmd = 0.0
@@ -40,7 +40,7 @@ class Controller(object):
         steer_cmd = self.lowpassfilter_steer_cmd.filt(steer_cmd)
 
         # commands limitation
-        speed_cmd = max(self.min_speed, min(speed_cmd, self.max_speed))
+        speed_cmd = max(0.0, min(speed_cmd, self.max_speed))
         steer_cmd = max(-self.max_steer_angle, min(steer_cmd, self.max_steer_angle))
 
         if self.dbw_enabled is True:
