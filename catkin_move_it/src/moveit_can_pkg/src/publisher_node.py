@@ -15,9 +15,9 @@ def talker():
         data_list = [1, 255, 255, 1, 1, 1, 1]
         checksum = np.uint8(sum(data_list))
         print(checksum)
-        data_list.append((3))
+        data_list.append(3)
 
-        msg.id = 0x0183
+        msg.id = 391 #0x0183
         msg.dlc = 8
         msg.data = data_list
         pub.publish(msg)
