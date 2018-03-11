@@ -85,8 +85,8 @@ class DBWNode(object):
 
         spdcmd = SpeedCmd()
         spdcmd.enable = True
-        spdcmd.pedal_cmd_type = SpeedCmd.CMD_KPH
-        spdcmd.pedal_cmd = speed
+        spdcmd.speed_cmd_type = SpeedCmd.CMD_KPH
+        spdcmd.speed_cmd = speed
         self.speed_pub.publish(spdcmd)
 
     def current_velocity_cb(self, msg):
