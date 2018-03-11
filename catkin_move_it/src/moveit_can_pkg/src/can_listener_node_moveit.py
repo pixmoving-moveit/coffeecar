@@ -1,78 +1,76 @@
 #!/usr/bin/env python
-import rospy
-
 from can_msgs.msg import Frame
+from std_msgs.msg import Bool
 from geometry_msgs.msg import TwistStamped
 
 import cantools
-import rospkg
 import math
 
-def callback(msg):
+import rospy
+import rospkg
+
+#Global variables
+wheel_angle = None
+wheel_speed = None
+wheel_angle_2 = None
+DBW_mode = None
+
+# Global Constants
+wheel_base = 2.1 # in m
+
+# Load can database
+rospack = rospkg.RosPack()
+path = rospack.get_path('moveit_can_pkg')
+can_db = cantools.db.load_file(path + '/dbc/moveit_coffee.dbc')
+
+# List of messages
+feedback1_msg = can_db.get_message_by_name('Feedback_1')
+feedback2_msg = can_db.get_message_by_name('Feedback_2')
+
+def received_messages_cb(msg):
     msgID = msg.id
-    if (msgID == msg1_id):
-        global counter_msg1
-        counter_msg1 = 1
+
+    if msgID == feedback1_msg.id:
         data = can_db.decode_message(msgID, msg.data)
+        wheel_speed = data['Wheel_speed']
+        wheel_angle = data['Wheel_Angle']
 
-        global wheel_angle
-        wheel_angle = data['Wheel_Angle_2']
-
-        global DBW_mode
+    if msgID == feedback2_msg.id:
+        data = can_db.decode_message(msgID, msg.data)
+        wheel_angle_2 = data['Wheel_Angle_2']
         DBW_mode = data['DBW_mode']
 
-    if (msgID == msg2_id):
-        global counter_msg2
-        counter_msg2 = 1
-        data = can_db.decode_message(msgID, msg.data)
-        global wheel_speed
-        wheel_speed = data['Wheel_speed']
-        global wheel_angle_2
-        wheel_angle_2 = data['Wheel_Angle']
-
-    else:
-        print("nothing found!!")
-
 if __name__ == '__main__':
-    
-    # Load can database
-    rospack = rospkg.RosPack()
-    path = rospack.get_path('moveit_can_pkg')
-    can_db = cantools.db.load_file(path + '/dbc/moveit_coffee.dbc')
-
     # node init
     rospy.init_node('receive_can', anonymous=True)
-
-    # subscriber
-    rospy.Subscriber("/received_messages", Frame, callback)
-    
-    pub = rospy.Publisher("twist_stamped", TwistStamped, queue_size=1)
-    
-    #Global variables
-    wheel_angle = 0
-    DBW_mode = 0
-    wheel_speed = 0
-    wheel_angle_2 = 0
-
-    msg1_id = 391
-    msg2_id = 387
-    counter_msg1 = 0
-    counter_msg2 = 0
-    car_length = 2.1 # should be changed
-
-    twist_msg = TwistStamped()
     rate = rospy.Rate(10)
 
+    # Subscribers
+    rospy.Subscriber("/received_messages", Frame, received_messages_cb)
+
+    # Publishers
+    pub_actual_twist = rospy.Publisher("/actual_twist", TwistStamped, queue_size=1)
+    pub_dbw_enabled = rospy.Publisher("/vehicle/actual_twist", Bool, queue_size=1)
+
+    actual_twist_msg = TwistStamped()
+    dbw_enabled_msg = Bool()
+
     while not rospy.is_shutdown():
-        if (counter_msg1 + counter_msg2 >= 2):
-            twist_msg.twist.linear.x = wheel_speed*0.277778
-            twist_msg.twist.angular.z = (twist_msg.twist.linear.x*(
-                math.tan((wheel_angle*math.pi)/180))/(car_length))
-            pub.publish(twist_msg)
-        if (counter_msg1 == 1):
-            print("msg1(391) only rec.")
-        if (counter_msg2 == 1):
-            print("msg2(387) only rec.")
-        else:
-            print("nothing rec.")
+        if (DBW_mode is not None and wheel_speed is not None):
+            x_velocity = wheel_speed*0.277778
+            actual_twist_msg.twist.linear.x = x_velocity
+
+            wheel_angle_rad = wheel_angle*math.pi/180
+            psi_rate = x_velocity*math.tan(wheel_angle_rad)/wheel_base
+            actual_twist_msg.twist.angular.z = psi_rate
+
+            if DBW_mode == 2:
+                dbw_enabled_msg.data = True
+            else:
+                dbw_enabled_msg.data = False
+
+            # Publish
+            pub_actual_twist.publish(actual_twist_msg)
+            pub_dbw_enabled.publish(dbw_enabled_msg)
+
         rate.sleep()

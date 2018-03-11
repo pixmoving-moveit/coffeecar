@@ -1,64 +1,73 @@
 #!/usr/bin/env python
-# license removed for brevity
-import rospy
 
 from can_msgs.msg import Frame
-from geometry_msgs.msg import Twist
+from std_msgs.msg import Bool
+from robot_coffee_msgs.msg import SpeedCmd, SteeringCmd, SteeringReport
 
 import cantools
-import rospkg
 import numpy as np
-import math
 
-def twist_cb(msg):
-    global flag_cmd
-    flag_cmd = 1
-    global speed_cmd
-    speed_cmd = msg.linear.x*3.6
-    global steering_cmd
-    steering_cmd = math.atan(((msg.angular.z*car_length)/speed_cmd))
+import rospkg
+import rospy
 
-def talker():
-    pub = rospy.Publisher('sent_messages', Frame, queue_size=10)
-    
-    rospy.Subscriber('cmd_vel', Twist, twist_cb)
+# Global variables
+speed_cmd = None
+steering_cmd = None
+gear_cmd = None
+dbw_enabled = None
 
-    rospy.init_node('can_send', anonymous=True)
-    rate = rospy.Rate(10)
-    while not rospy.is_shutdown():
-        if (flag_cmd == 1):
-            msg = Frame()
-            command_msg = can_db.get_message_by_name('Commands')
-            msg.id = command_msg.frame_id
-            checksum = np.uint8(speed_cmd + steering_cmd + gear_cmd + 1 + 1 + 1)
-            msg.data = command_msg.encode({'SpdCmd': speed_cmd,
-                                           'SteeringCmd': steering_cmd,
-                                           'GearCmd': gear_cmd,
-                                           'Checksum': checksum})
-            pub.publish(msg)
+# Global constants
+dummy_constant = 1
+car_length = 2.1   # in m
 
-        rate.sleep()
-        # data_list = [1, 255, 255, 1, 1, 1, 1]
+def steering_cmd_cb(msg):
+    steering_cmd = msg.steering_wheel_angle_cmd
 
-        # print(checksum)
-        # data_list.append(3)
+def speed_cmd_cb(msg):
+    speed_cmd = msg.speed_cmd
 
-        # msg.id = 391 #0x0183
-        # msg.dlc = 8
-        # msg.data = data_list
+def dbw_enabled_cb(msg):
+    dbw_enabled = msg.data
+    if dbw_enabled:
+        gear_cmd = 2
+    else:
+        gear_cmd = 1
 
+def can_talker():
+    if (steering_cmd is not None and speed_cmd is not None and dbw_enabled is not None):
+        msg = Frame()
+        command_msg = can_db.get_message_by_name('Commands')
+        msg.id = command_msg.frame_id
+        checksum = np.uint8(speed_cmd + steering_cmd + gear_cmd + dummy_constant*3)
+        msg.data = command_msg.encode({'SpdCmd': speed_cmd,
+                                       'SteeringCmd': steering_cmd,
+                                       'GearCmd': gear_cmd,
+                                       'something_01_1': dummy_constant,
+                                       'something_01_2': dummy_constant,
+                                       'something_01_3': dummy_constant,
+                                       'Checksum': checksum})
+        can_pub.publish(msg)
 
 if __name__ == '__main__':
+
+    # Publishers
+    can_pub = rospy.Publisher('sent_messages', Frame, queue_size=10)
     
+    # Subscribers
+    rospy.Subscriber('/vehicle/steering_cmd', SteeringCmd, steering_cmd_cb)
+    rospy.Subscriber('/vehicle/speed_cmd', SpeedCmd, speed_cmd_cb)
+    rospy.Subscriber('/vehicle/dbw_enabled', Bool, dbw_enabled_cb)
+
+    # Can database loading
     rospack = rospkg.RosPack()
     path = rospack.get_path('moveit_can_pkg')
     can_db = cantools.db.load_file(path + '/dbc/moveit_coffee.dbc')
 
-    speed_cmd = 0
-    steering_cmd = 0
-    gear_cmd = 0
-    flag_cmd = 0
-    car_length = 2.1
+    # ROS node init
+    rospy.init_node('can_send', anonymous=True)
+    rate = rospy.Rate(10)
 
+    while not rospy.is_shutdown():
+        can_talker()
 
-    talker()
+        rate.sleep()
