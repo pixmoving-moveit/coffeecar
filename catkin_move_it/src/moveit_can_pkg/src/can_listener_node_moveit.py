@@ -1,20 +1,12 @@
 #!/usr/bin/env python
 import rospy
+
 from can_msgs.msg import Frame
 from geometry_msgs.msg import TwistStamped
+
 import cantools
+import rospkg
 import math
-
-wheel_angle = 0
-DBW_mode = 0
-wheel_speed = 0
-wheel_angle_2 = 0
-
-msg1_id = 391
-msg2_id = 387
-counter_msg1 = 0
-counter_msg2 = 0
-car_length = 2.1 # should be changed
 
 def callback(msg):
     msgID = msg.id
@@ -38,25 +30,39 @@ def callback(msg):
         global wheel_angle_2
         wheel_angle_2 = data['Wheel_Angle']
 
-
     else:
         print("nothing found!!")
 
-
-
-
-
-
 if __name__ == '__main__':
-    can_db = cantools.db.load_file('./dbc/moveit_coffee.dbc')
+    
+    # Load can database
+    rospack = rospkg.RosPack()
+    path = rospack.get_path('moveit_can_pkg')
+    can_db = cantools.db.load_file(path + '/dbc/moveit_coffee.dbc')
 
-    rospy.init_node('listener', anonymous=True)
+    # node init
+    rospy.init_node('receive_can', anonymous=True)
 
-    rospy.Subscriber("sent_messages", Frame, callback)
-    pub = rospy.Publisher("twist_stamped", TwistStamped)
+    # subscriber
+    rospy.Subscriber("/received_messages", Frame, callback)
+    
+    pub = rospy.Publisher("twist_stamped", TwistStamped, queue_size=1)
+    
+    #Global variables
+    wheel_angle = 0
+    DBW_mode = 0
+    wheel_speed = 0
+    wheel_angle_2 = 0
+
+    msg1_id = 391
+    msg2_id = 387
+    counter_msg1 = 0
+    counter_msg2 = 0
+    car_length = 2.1 # should be changed
+
     twist_msg = TwistStamped()
     rate = rospy.Rate(10)
-    global car_length
+
     while not rospy.is_shutdown():
         if (counter_msg1 + counter_msg2 >= 2):
             twist_msg.twist.linear.x = wheel_speed*0.277778

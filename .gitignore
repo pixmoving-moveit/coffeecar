@@ -6,5 +6,6 @@ el_isolated
 .idea
 .vscode
 .ycm_extra_conf.py
+.ycm_extra_conf.pyc
 launch.json
 tasks.json
