@@ -143,7 +143,7 @@ class CANListenerNode(object):
             data = self.can_db.decode_message(id, msg.data)
 
         if id == self.canmsg_Public01.frame_id:
-            self.act_steer_angle = data['ActSteeringAngle']
+            self.act_steer_angle = data['Wheel_Angle_2']
             self.act_velocity = data['ActSpeed']
 
         if id == self.canmsg_UserInput.frame_id:                  #TODO remove
