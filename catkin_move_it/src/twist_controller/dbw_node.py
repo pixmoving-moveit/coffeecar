@@ -27,7 +27,7 @@ class DBWNode(object):
         accel_limit = rospy.get_param('~accel_limit', 1.)                  # in m/s^2
         decel_limit = rospy.get_param('~decel_limit', -5)                  # in m/s^2
         self.max_steer_angle = rospy.get_param('~max_steer_angle', 0.44)   # in rad
-        self.direct_steering = rospy.get_param('~direct_steering', False)  # bool
+        self.direct_steering = rospy.get_param('~direct_steering', True)   # bool
 
         # Create `TwistController` object
         kwargs = {
@@ -74,7 +74,7 @@ class DBWNode(object):
             speed_cmd, steer_cmd = self.controller.control(**kwargs)
 
             if self.direct_steering is True and self.angular_velocity_cmd is not None :
-                steer_cmd = self.angular_velocity_cmd/0.44 * self.max_steer_angle #TODO remove the hardcoded value (see line 26 teleop_joy.cpp)
+                steer_cmd = self.angular_velocity_cmd/0.44 * -25.2 #TODO remove the hardcoded value (see line 26 teleop_joy.cpp)
 
             if (self.current_velocity is not None and self.twist_cmd is not None and self.dbw_enabled is not None):
                 self.publish(speed_cmd, steer_cmd)

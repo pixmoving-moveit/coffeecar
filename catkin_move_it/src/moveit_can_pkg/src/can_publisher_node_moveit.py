@@ -78,13 +78,13 @@ class CANPublisher(object):
                                 steering_cmd_1 +
                                 steering_cmd_2 +
                                 self.gear_cmd +
-                                self.dummy_constant)
+                                self.dummy_constant*3)
 
             data_list = [int(np.uint8(self.speed_cmd)), steering_cmd_1, steering_cmd_2, self.gear_cmd, 1, 1, 1, checksum]
 
             # Log Info
-            # rospy.loginfo(str(steering_cmd_raw))
-            # rospy.loginfo(str(data_list))
+            rospy.loginfo(str(steering_cmd_raw))
+            rospy.loginfo(str(data_list))
 
             msg.data = data_list
 
