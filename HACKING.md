@@ -138,7 +138,9 @@ Kayak uses the [open CAN definition format kcd](https://github.com/julietkilo/kc
 
 #### Software requirements
 [BUSMASTER](https://rbei-etas.github.io/busmaster/)
+
 [TDM-GCC MinGW Compiler 32bits](http://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/Previous/1.1309.0/tdm-gcc-4.8.1.exe/download) if you want to use BUSMASTER's node programmation capability.
+
 [PeakCAN USB Windows driver](https://www.peak-system.com/PCAN-USB.199.0.html?&L=2)
 
 #### Hardware requirements
@@ -149,6 +151,7 @@ Follow [this link](https://github.com/rbei-etas/busmaster/wiki/Hardware-support)
 ### First steps
 #### Startup
 Plug-in your Peak-CAN USB adapter then start BUSMASTER. If you get the following, something is wrong with your driver:
+
 ![](images/listing_hardware_interfaces_failed.png)
 
 #### Driver selection
@@ -157,22 +160,27 @@ To select controller use *CAN->Driver Selection->{Driver}* For example to select
 #### Channel configuration
 If there are multiple devices connected BUSMASTER will display a Hardware selection dialog as shown below
 to map the devices and the channels.
+
 ![](images/hardware_selection.png)
 
 #### CAN Parameter Configuration
 BUSMASTER Will select the open the CAN Channel with 500kbps by default. These default parameters can be changed using CAN channel configuration window. Click on the "Advanced" button provided in the hardware selection dialog. This will invoke the Configure CAN Controller dialog depending on the controller selected.
 
 The following figure shows the channel configuration window.
+
 ![](images/can_configuration.png)
 
 #### Connect
 Once the Configuration done, BUSMASTER can be connected to the CAN Network using **CAN->Connect** menu. You should now see data starting to come in.
+
 ![](images/connect.png)
 
 To see at which frequency each message is sent, use **CAN->Message Window->Time Mode->Relative time mode**.
+
 ![](images/relative_time.png)
 
 To choose the decimal or hexadecimal display format use: **View->Hex**
+
 ![](images/hexadecimal.png)
 
 
@@ -183,9 +191,11 @@ This is an optional step and is required for Message&Signal interpretation of CA
 If you existing CAN database is a ".dbc" file you have to convert it to a ".dbf" file to use it with BUSMASTER.
 
 Use  **Tools->Format Converter** menu:
+
 ![](images/format_converter.png)
 
 Choose the **other converters** tab:
+
 ![](images/dbc_dbf.png)
 
 From the dropdown menu choose the **DBC to DBF Conversion**. Choose your input file, and a name for your output file, then press **Convert**.
@@ -193,10 +203,12 @@ From the dropdown menu choose the **DBC to DBF Conversion**. Choose your input f
 **Database association**
 To enable messages interpretation, you need to "associate the database" with the current BUSMASTER configuration. 
 Use **CAN->Database->Associate**.
+
 ![](images/associate.png)
 
 **Message Interpretation**
 Use **CAN->Message Window->Interpret** to either enable or disable message on-line interpretation.
+
 ![](images/interpret.png)
 
 This button is enabled only in *message overwrite mode*. If on-line interpretation of message is enabled, a message
@@ -211,6 +223,7 @@ Message interpretation can be obtained by double clicking on the message or clic
 
 #### Sending messages on the bus
 Messages can be send over CAN-bus by following the steps given below. Select **CAN --> Transmit Window** menu option. This will display the dialog as shown is figure below.
+
 ![](images/transmit_window.png)
 
 **Configuring Messages:**
@@ -240,7 +253,7 @@ For more details see [BUSMASTER's user manual](https://raw.githubusercontent.com
 All communication-relevant data that are processed in a networked CAN bus system as well as their interrelationships are usually administered in a central communications database.
 Kvaser Database Editor is a freely distributed data administration program with which these communication databases can be created and modified in the form of CAN databases (dbc). 
 
-####Downloading it
+#### Downloading it
 Either use this [direct link](http://canlandbucket.s3-website-eu-west-1.amazonaws.com/productionResourcesFiles/12be7b14-7f85-454c-bec1-09553f797851/kvaser_database_editor_setup.exe) or go on the [Kvaser download page](https://www.kvaser.com/downloads-kvaser/) and use Ctrl-F *"database"* on the page to find the right software.
 
 #### Creating a CAN database
@@ -251,14 +264,20 @@ Either use this [direct link](http://canlandbucket.s3-website-eu-west-1.amazonaw
 
 #### Adding messages to it
 * Right click in the Messages & Signals tab.
+
 ![](images/add_message.png)
+
 * Choose "Insert Message"
+
 * Next you need to specify at least its **Name, CAN Id and DLC**. 
 
 #### Adding signals to the message
 * This is where the Reverse Engineering comes in! To populate the signals you need to figure out what is the meaning of the bits/bytes in the CAN frame data (also called the "payload"). For more insight on how to figure this out, see the **CAN Reverse Engineering** section below.
+
 * Right click in the signal section.
+
 ![](images/insert_signal.png)
+
 * Type in the signal characteristics:
 
 **Signal name**
@@ -285,7 +304,7 @@ Factor applied to the raw value
 **Offset**
 Offset applied to the intermediate value
 
-*Real World Value Computation Example:*
+***Real World Value Computation Example:***
 ```sh
 real_world_value = raw_value * Factor + Offset
 ```
@@ -304,11 +323,15 @@ Optional - Describe the content of the signal
 
 **Values**
 Tables where you can associate alphanumeric definitions to specific values of the signal.
+
 ![](images/values.png)
 
 **Here's a Steering Angle signal example**
+
 ![](images/signal_example.png)
+
 with its associated signal matrix:
+
 ![](images/signal_matrix.png)
 
 Once you have completed your dbc file, convert it in dbf (see above) and associate it in BUSMASTER to validate your understanding of the CAN signals. 
@@ -350,7 +373,7 @@ Several methodologies exist to facilitate the patern identification. All of it d
 
 6. Once the effect have been validated, name the signal in the DBC and try to discover everything! But most importantly :
 
-***Hack with love! ***
+***Hack with love!***
 
 ## Using Socket CAN with ROS 
 
