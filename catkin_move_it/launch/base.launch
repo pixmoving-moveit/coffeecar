@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-    <!--CAN Nodes -->
-    <include file="$(find moveit_can_pkg)/launch/can_bridge.launch"/>
-
-    <!--Everything else -->
-    <include file="./base_no_can.launch"/>
-</launch>

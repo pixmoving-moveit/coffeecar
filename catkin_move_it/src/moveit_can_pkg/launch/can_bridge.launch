@@ -1,5 +1,0 @@
-<launch>
-  <node pkg="socketcan_bridge" type="socketcan_bridge_node" name="topic_to_" output="screen">
-          <param name="can_device" value="can0" />
-  </node>
-</launch>

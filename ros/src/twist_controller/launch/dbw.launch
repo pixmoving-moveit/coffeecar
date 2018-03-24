@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="twist_controller" type="dbw_node.py" name="dbw_node" output="screen">
+        <param name="sample_time" value="0.1" />
+        <param name="min_speed" value="0.1"/>
+        <param name="max_speed" value="10"/> <!-- in kph -->
+        <param name="wheel_base" value="2.1" />
+        <param name="max_lat_accel" value="3." />
+        <param name="accel_limit" value="1." />
+        <param name="decel_limit" value="-1." />
+        <param name="max_steer_angle" value="0.44" />
+        <param name="direct_steering" value="True" />        
+    </node>
+</launch>
